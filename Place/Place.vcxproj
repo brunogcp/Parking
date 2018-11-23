@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{F6239F50-B213-436B-88C0-D39ABDE4036F}</ProjectGuid>
+    <ProjectGuid>{7F850484-3F68-4434-B77A-FDBDEEF0EBA5}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Parking</RootNamespace>
+    <RootNamespace>Place</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -145,12 +145,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Parking.cpp" />
-    <ClCompile Include="timer.cpp" />
+    <ClCompile Include="Place.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Parking.h" />
-    <ClInclude Include="timer.h" />
+    <ClInclude Include="Place.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
