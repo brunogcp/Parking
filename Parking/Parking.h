@@ -18,7 +18,7 @@ string settings_File_Name;
 string settings_line_File;
 
 fstream out_file;
-string out_File_Name = "out.txt";
+string out_File_Name = "out.html";
 
 VideoCapture vid;
 char c;
