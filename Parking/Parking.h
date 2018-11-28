@@ -8,6 +8,7 @@ using namespace cv;
 
 Mat frame, frame_gray, blur_Frame, thresh_Contrast, thresh_Canny, morph_Frame, frame_copy, frame_display;
 int blur_Val, thresh_Contrast_Val, thresh_Canny_Val, detect_time_val;
+VideoWriter outvideo;
 
 fstream roi_File;
 string roi_File_Name;
@@ -26,6 +27,7 @@ bool pause = true;
 bool process_place_bool = false;
 bool display = false;
 bool display_process = false;
+bool writeVid = false;
 int offset = 2;
 
 bool parking_Status[16] = { false , false, false , false , false , false , false , false , false , false , false , false , false , false , false , false };

@@ -54,6 +54,11 @@ int main(int argc, char** argv) {
 	try
 	{
 		cout << endl << "Press 'h' for help" << endl;
+		string::size_type pAt = settings_File_Name.find_last_of('.');                  // Find extension point
+		const string videoOutFilename = settings_File_Name.substr(0, pAt) + "_out.avi";
+		Size videoSize = Size((int)vid.get(CAP_PROP_FRAME_WIDTH), (int)vid.get(CAP_PROP_FRAME_HEIGHT));
+		int ex = static_cast<int>(vid.get(CAP_PROP_FOURCC));
+		outvideo.open(videoOutFilename, outvideo.fourcc('M', 'J', 'P', 'G'), vid.get(CAP_PROP_FPS), videoSize, true);
 
 		while (true)
 		{
@@ -247,6 +252,11 @@ int main(int argc, char** argv) {
 				}
 			}
 
+			if (writeVid)
+			{
+				outvideo.write(frame);
+			}
+
 			c = (char)waitKey(30);
 			if (c == 27) {
 				break;
@@ -268,6 +278,9 @@ int main(int argc, char** argv) {
 				break;
 			case 'h':
 				help();
+				break;
+			case 's':
+				writeVid = !writeVid;
 				break;
 			}
 
